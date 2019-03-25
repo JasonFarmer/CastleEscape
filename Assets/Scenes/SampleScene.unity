@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 229098938}
   - component: {fileID: 229098940}
   - component: {fileID: 229098941}
+  - component: {fileID: 229098942}
   m_Layer: 0
   m_Name: zombie knight 1
   m_TagString: Untagged
@@ -216,8 +217,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -308,6 +309,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 0.96}
   m_EdgeRadius: 0
+--- !u!114 &229098942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229098935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba222e28869084664a4ea8fbc7a6c298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkName: 0
+  targetName: 
+  checkTag: 1
+  targetTag: Player
+  checkLayer: 0
+  targetLayer: 
+  onCollisionEnterActions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 229098935}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OnCollision2DActivator+CollisionAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollisionStayActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnCollision2DActivator+CollisionAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollisionExitActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnCollision2DActivator+CollisionAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &572076907
 GameObject:
   m_ObjectHideFlags: 0
