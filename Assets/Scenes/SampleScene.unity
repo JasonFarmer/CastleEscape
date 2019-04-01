@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 229098940}
   - component: {fileID: 229098941}
   - component: {fileID: 229098942}
+  - component: {fileID: 229098943}
   m_Layer: 0
   m_Name: zombie knight 1
   m_TagString: enemy
@@ -191,7 +192,7 @@ Transform:
   m_LocalScale: {x: 2.5853, y: 2.5853, z: 2.5853}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229098938
 MonoBehaviour:
@@ -239,18 +240,7 @@ MonoBehaviour:
   onFixedUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 229098938}
-        m_MethodName: ActionSetXVelocity
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: -1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 229098935}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -271,12 +261,12 @@ MonoBehaviour:
   onLateUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 229098935}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 229098943}
+        m_MethodName: ActionFollowObject
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 393405312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -293,7 +283,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -307,7 +297,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.96}
+  m_Size: {x: 0.7, y: 0.96}
   m_EdgeRadius: 0
 --- !u!114 &229098942
 MonoBehaviour:
@@ -352,6 +342,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnCollision2DActivator+CollisionAction, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &229098943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229098935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cec12b136d6a3478120ef5c83156a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instant: 0
+  speed: 6
+  stopOnArrival: 1
+  arrivalDistance: 0.3
 --- !u!1 &393405312
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +412,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -418,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.96}
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &393405315
 MonoBehaviour:
@@ -586,8 +591,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d92df0e9cc276d349b9b7e2ed07efa3c, type: 3}
+  m_SortingOrder: 100
+  m_Sprite: {fileID: 21300000, guid: 7a13a27f81f985e4ea295d0c54161ae8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -605,12 +610,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393405312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.53, y: 8.367, z: 0}
+  m_LocalPosition: {x: 36.48, y: 8.44, z: 0}
   m_LocalScale: {x: 3.039624, y: 2.8785698, z: 1}
   m_Children:
   - {fileID: 562081060}
+  - {fileID: 1413635142}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &393405322
 MonoBehaviour:
@@ -623,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e2868180383496e8840fadc2c20bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: space
+  button: Fire1
   cooldown: 1
   onButtonPressed:
     m_PersistentCalls:
@@ -726,7 +732,7 @@ MonoBehaviour:
         m_MethodName: ActionSpawnObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 954166831}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -818,7 +824,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &749522027
 GameObject:
@@ -889,7 +895,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: a735eaf52b4ae11499601c9af4743b32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -907,12 +913,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749522027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: -8.66, z: 0}
-  m_LocalScale: {x: 100.25964, y: 52.63631, z: 108.3888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -197, y: -200, z: 270.14615}
+  m_LocalScale: {x: 1344.9911, y: 1421.9497, z: 2928.0818}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1413635142}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954166831
 GameObject:
@@ -924,6 +930,7 @@ GameObject:
   - component: {fileID: 954166838}
   - component: {fileID: 954166837}
   - component: {fileID: 954166835}
+  - component: {fileID: 954166832}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -931,6 +938,49 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &954166832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954166831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e255820a8a54cb28986e93e3568cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkName: 0
+  targetName: 
+  checkTag: 1
+  targetTag: enemy
+  checkLayer: 0
+  targetLayer: 
+  onTriggerEnterActions:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 954166835}
+        m_MethodName: ActionDestroyObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTriggerStayActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTriggerExitActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &954166835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,11 +1024,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954166831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.273745, y: 11.27073, z: -0.07421875}
+  m_LocalPosition: {x: 33.67, y: 8.58, z: -0.07421875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154281106
 GameObject:
@@ -1009,7 +1059,7 @@ Transform:
   - {fileID: 1715448501}
   - {fileID: 1981652454}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211377032
 GameObject:
@@ -1198,7 +1248,7 @@ Transform:
   m_LocalScale: {x: 1.475, y: 1.725, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1364579857
 MonoBehaviour:
@@ -1276,7 +1326,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.32941177, g: 0.32941177, b: 0.32941177, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1313,12 +1363,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1413635139}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: -1.62, z: -10}
-  m_LocalScale: {x: 0.07454298, y: 0.037017, z: 0.037017}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 0.02452375, y: 0.012859509, z: 0.037017}
+  m_Children:
+  - {fileID: 749522030}
+  m_Father: {fileID: 393405321}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484462016
 GameObject:
@@ -1333,6 +1384,7 @@ GameObject:
   - component: {fileID: 1484462019}
   - component: {fileID: 1484462021}
   - component: {fileID: 1484462022}
+  - component: {fileID: 1484462023}
   m_Layer: 0
   m_Name: zombie knight 2
   m_TagString: enemy
@@ -1397,7 +1449,7 @@ Transform:
   m_LocalScale: {x: 2.9175, y: 2.9175, z: 2.9175}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1484462019
 MonoBehaviour:
@@ -1444,18 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onFixedUpdate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1484462019}
-        m_MethodName: ActionSetXVelocity
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: -1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onUpdate:
@@ -1465,7 +1506,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onLateUpdate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1484462023}
+        m_MethodName: ActionFollowObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 393405312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &1484462022
@@ -1491,8 +1543,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.96}
+  m_Size: {x: 0.7, y: 0.96}
   m_EdgeRadius: 0
+--- !u!114 &1484462023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484462016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cec12b136d6a3478120ef5c83156a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instant: 0
+  speed: 6
+  stopOnArrival: 1
+  arrivalDistance: 0.3
 --- !u!1 &1592629603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1573,7 @@ GameObject:
   - component: {fileID: 1592629606}
   - component: {fileID: 1592629608}
   - component: {fileID: 1592629609}
+  - component: {fileID: 1592629610}
   m_Layer: 0
   m_Name: zombie knight 3
   m_TagString: enemy
@@ -1570,7 +1638,7 @@ Transform:
   m_LocalScale: {x: 2.9292, y: 2.9292, z: 2.9292}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1592629606
 MonoBehaviour:
@@ -1617,18 +1685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onFixedUpdate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1592629606}
-        m_MethodName: ActionSetXVelocity
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: -1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onUpdate:
@@ -1638,7 +1695,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onLateUpdate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592629610}
+        m_MethodName: ActionFollowObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 393405312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &1592629609
@@ -1664,8 +1732,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.96}
+  m_Size: {x: 0.7, y: 0.96}
   m_EdgeRadius: 0
+--- !u!114 &1592629610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592629603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cec12b136d6a3478120ef5c83156a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instant: 0
+  speed: 6
+  stopOnArrival: 1
+  arrivalDistance: 0.3
 --- !u!1 &1715448500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1888,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.059999943, y: 0.07000005, z: 0}
   m_MaxChunkCount: 16
@@ -6754,7 +6837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1936236390
 GameObject:
@@ -9480,7 +9563,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094884118
 GameObject:
@@ -9522,5 +9605,5 @@ Transform:
   - {fileID: 1936236391}
   - {fileID: 1758502801}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
