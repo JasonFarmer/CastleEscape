@@ -236,6 +236,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4146347, y: 2.975607}
   m_EdgeRadius: 0
+--- !u!1 &229098935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1982190521108292, guid: 4f0b2f6a669a2d846a47153b8004bee7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097230732}
+--- !u!114 &229098944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229098935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56db369d24ad48a59c29d6ad9c3b296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &378488443
 Prefab:
   m_ObjectHideFlags: 0
@@ -1000,6 +1016,26 @@ Prefab:
       propertyPath: onLateUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 393405312}
+    - target: {fileID: 114828982320333488, guid: 4f0b2f6a669a2d846a47153b8004bee7,
+        type: 2}
+      propertyPath: onCollisionEnterActions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 229098944}
+    - target: {fileID: 114828982320333488, guid: 4f0b2f6a669a2d846a47153b8004bee7,
+        type: 2}
+      propertyPath: onCollisionEnterActions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActionReloadCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828982320333488, guid: 4f0b2f6a669a2d846a47153b8004bee7,
+        type: 2}
+      propertyPath: onCollisionEnterActions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828982320333488, guid: 4f0b2f6a669a2d846a47153b8004bee7,
+        type: 2}
+      propertyPath: onCollisionEnterActions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f0b2f6a669a2d846a47153b8004bee7, type: 2}
   m_IsPrefabAsset: 0
