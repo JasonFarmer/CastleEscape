@@ -474,47 +474,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4146347, y: 2.975607}
   m_EdgeRadius: 0
---- !u!1 &335474168
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 335474170}
-  - component: {fileID: 335474169}
-  m_Layer: 0
-  m_Name: spawer 8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &335474169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335474168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 541f3d52e530048b1bd56f93666bda57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &335474170
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335474168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.87, y: -13.34, z: 0.0078125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1730627480}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &378488443
 Prefab:
   m_ObjectHideFlags: 0
@@ -1037,126 +996,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4146347, y: 2.975607}
   m_EdgeRadius: 0
---- !u!1 &488432647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 488432648}
-  - component: {fileID: 488432650}
-  - component: {fileID: 488432649}
-  m_Layer: 0
-  m_Name: spawn trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &488432648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 488432647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.2, y: 0.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1079646310}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &488432649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 488432647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e255820a8a54cb28986e93e3568cb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkName: 0
-  targetName: 
-  checkTag: 1
-  targetTag: Player
-  checkLayer: 0
-  targetLayer: 
-  onTriggerEnterActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1079646309}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2017690453}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1079646309}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 117746345}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1079646309}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 813487461}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerStayActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerExitActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!61 &488432650
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 488432647}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10975647, y: 0.10975933}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4146347, y: 2.975607}
-  m_EdgeRadius: 0
 --- !u!1 &562081059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1373,7 @@ Transform:
   m_Children:
   - {fileID: 947280058}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719704027
 GameObject:
@@ -1575,7 +1414,7 @@ Transform:
   m_Children:
   - {fileID: 479148228}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &749522027
 GameObject:
@@ -1726,7 +1565,7 @@ Transform:
   m_Children:
   - {fileID: 607100981}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &911595149
 GameObject:
@@ -2127,48 +1966,7 @@ Transform:
   m_Children:
   - {fileID: 1506127126}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1079646308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1079646310}
-  - component: {fileID: 1079646309}
-  m_Layer: 0
-  m_Name: spawer 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1079646309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079646308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 541f3d52e530048b1bd56f93666bda57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1079646310
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079646308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.09, y: -13.34, z: 0.0078125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 488432648}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1097230732
 Prefab:
@@ -3395,7 +3193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667127650
 MonoBehaviour:
@@ -3483,126 +3281,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1730627479
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1730627480}
-  - component: {fileID: 1730627482}
-  - component: {fileID: 1730627481}
-  m_Layer: 0
-  m_Name: spawn trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1730627480
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730627479}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6, y: -0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 335474170}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1730627481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730627479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e255820a8a54cb28986e93e3568cb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkName: 0
-  targetName: 
-  checkTag: 1
-  targetTag: Player
-  checkLayer: 0
-  targetLayer: 
-  onTriggerEnterActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 335474169}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2017690453}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 335474169}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 117746345}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 335474169}
-        m_MethodName: ActionSpawnObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 813487461}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerStayActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerExitActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!61 &1730627482
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730627479}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10975647, y: 0.10975933}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4146347, y: 2.975607}
-  m_EdgeRadius: 0
 --- !u!1001 &1740102478
 Prefab:
   m_ObjectHideFlags: 0
@@ -8628,7 +8306,7 @@ Transform:
   m_Children:
   - {fileID: 1644038328}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819766563
 GameObject:

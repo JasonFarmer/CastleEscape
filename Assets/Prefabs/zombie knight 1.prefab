@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61549870468211756}
   - component: {fileID: 114828982320333488}
   - component: {fileID: 114518765585869734}
+  - component: {fileID: 114137353862630402}
   m_Layer: 0
   m_Name: zombie knight 1
   m_TagString: enemy
@@ -91,6 +92,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.96}
   m_EdgeRadius: 0
+--- !u!114 &114137353862630402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982190521108292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56db369d24ad48a59c29d6ad9c3b296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114430071702468828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,15 +186,15 @@ MonoBehaviour:
   onCollisionEnterActions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1982190521108292}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 114137353862630402}
+        m_MethodName: ActionLoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DieScreen
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: OnCollision2DActivator+CollisionAction, Assembly-CSharp, Version=0.0.0.0,
